@@ -1,13 +1,13 @@
 %define debug_package %{nil}
 
 Name:           libmallincam
-Version:        1.55.24239
+Version:        1.55.24621
 Release:        0
 Summary:        Mallincam camera support library
 License:	GPLv2+
 Prefix:         %{_prefix}
 Provides:       libmallincam = %{version}-%{release}
-Obsoletes:      libmallincam < 1.55.24239
+Obsoletes:      libmallincam < 1.55.24621
 Source:         libmallincam-%{version}.tar.gz
 Patch0:         pkg-config.patch
 Patch1:         udev-rules.patch
@@ -20,7 +20,7 @@ Summary:        Development files for %{name}
 Group:          Development/Libraries
 Requires:       %{name}%{?_isa} = %{version}-%{release}
 Provides:       libmallincam-devel = %{version}-%{release}
-Obsoletes:      libmallincam-devel < 1.55.24239
+Obsoletes:      libmallincam-devel < 1.55.24621
 
 %description    devel
 The %{name}-devel package contains libraries and header files for
@@ -73,6 +73,7 @@ cp 70-mallincam-cameras.rules %{buildroot}/etc/udev/rules.d
 %{_libdir}/pkgconfig/*.pc
 
 %changelog
+* Thu Feb 8 2024 James Fidell <james@openastroproject.org> - 1.55.24621-0
+- Update from upstream
 * Fri Jan 5 2024 James Fidell <james@openastroproject.org> - 1.55.24239-0
 - Initial RPM release
-
